@@ -21,7 +21,7 @@ class LengthTypeInstance extends TypeInstance
     public function rules(Request $request)
     {
         return [
-            'length' => 'numeric|between:500,1000',
+            'length' => 'numeric',
             'units' => 'required|in:cm,m',
         ];
     }
@@ -29,7 +29,6 @@ class LengthTypeInstance extends TypeInstance
     public function messages()
     {
         return [
-            'length.between' => 'The specified length must be between :min and :max.',
             'units.in' => 'The unit must be either CM or M.',
             'units.required' => 'The unit must be either CM or M.',
         ];
