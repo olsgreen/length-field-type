@@ -1,0 +1,32 @@
+{
+    "name": "olsgreen/length-field-type",
+    "description": "Length field type.",
+    "keywords": ["laravel", "model", "fields"],
+    "license": "GPL",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/olsgreen/length-field-type"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~4.0",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mailable\\Support\\Lists\\Field\\Types\\Length\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
