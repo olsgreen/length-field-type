@@ -17,13 +17,6 @@ use Mailable\Support\Lists\Field\Types\TypeRegistry;
 class FieldServiceProvider extends ServiceProvider
 {
     /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
-    /**
      * Register the factory in the application container.
      *
      * @return void
@@ -37,11 +30,6 @@ class FieldServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        //
-    }
-
-    public function provides()
-    {
-        return [LengthTypeDefinition::class, LengthTypeInstance::class];
+        $this->loadViewsFrom(__DIR__.'/../views', 'length-field-type');
     }
 }

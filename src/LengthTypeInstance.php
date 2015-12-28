@@ -16,7 +16,7 @@ use Mailable\Support\Lists\Field\Types\TypeInstance;
 
 class LengthTypeInstance extends TypeInstance
 {
-    protected $presenter = 'length-instance';
+    protected $presenter = 'length-field-type::_length-type-instance';
 
     public function rules(Request $request)
     {
@@ -26,7 +26,8 @@ class LengthTypeInstance extends TypeInstance
         ];
     }
 
-    public function messages(){
+    public function messages()
+    {
         return [
             'length.between' => 'The specified length must be between :min and :max.',
             'units.in' => 'The unit must be either CM or M.',
