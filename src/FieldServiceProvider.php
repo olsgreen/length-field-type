@@ -12,7 +12,7 @@
 namespace Mailable\Support\Lists\Field\Types\Length;
 
 use Illuminate\Support\ServiceProvider;
-use Mailable\Support\Lists\Field\Types\TypeRegistry;
+use Mailable\Support\Lists\Field\Types\Registry;
 
 class FieldServiceProvider extends ServiceProvider
 {
@@ -23,7 +23,7 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app[TypeRegistry::class]->register([
+        $this->app[Registry::class]->register([
             'length' => 'Mailable\Support\Lists\Field\Types\Length',
         ]);
     }

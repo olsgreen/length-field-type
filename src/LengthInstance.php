@@ -12,9 +12,9 @@
 namespace Mailable\Support\Lists\Field\Types\Length;
 
 use Illuminate\Http\Request;
-use Mailable\Support\Lists\Field\Types\TypeInstance;
+use Mailable\Support\Lists\Field\Types\Instance;
 
-class LengthTypeInstance extends TypeInstance
+class LengthInstance extends Instance
 {
     protected $presenter = 'length-field-type::_length-type-instance';
 

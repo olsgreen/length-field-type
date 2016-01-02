@@ -11,9 +11,9 @@
 
 namespace Mailable\Support\Lists\Field\Types\Length;
 
-use Mailable\Support\Lists\Field\Types\TypeDefinition;
+use Mailable\Support\Lists\Field\Types\Definition;
 
-class LengthTypeDefinition extends TypeDefinition
+class LengthDefinition extends Definition
 {
     protected $label = 'Length Input';
 
