@@ -12,25 +12,29 @@
 namespace Mailable\Support\Lists\Field\Types\Length;
 
 use Illuminate\Http\Request;
-use Mailable\Support\Lists\Field\Types\Instance;
+use Mailable\Support\Lists\Field\Types\Field;
 
-class LengthInstance extends Instance
+class LengthField extends Field
 {
     protected $presenter = 'length-field-type::_length-type-instance';
 
-    public function rules(Request $request)
+    public function rules(Request $request, $rules = [])
     {
-        return [
+        $rules = array_merge($rules, [
             'length' => 'numeric',
-            'units' => 'required|in:cm,m',
-        ];
+            'units' => 'in:cm,m',
+        ]);
+
+        return parent::rules($request, $rules);
     }
 
-    public function messages()
+    public function messages($messages = [])
     {
-        return [
+        $messages = array_merge($messages, [
             'units.in' => 'The unit must be either CM or M.',
             'units.required' => 'The unit must be either CM or M.',
-        ];
+        ]);
+
+        return parent::messages($messages);
     }
 }

@@ -1,5 +1,4 @@
 <div class="form-group {{ ($control->hasFormErrors()) ? 'has-error' : '' }}">
-
     <label for="{{ $control->getFormName() }}">
         {{ $control->getFormLabel() }}
     </label>
@@ -11,10 +10,10 @@
         <div class="col-xs-4" style="padding-left: 0;">
             <select name="{{ $control->getFormName('units') }}" class="form-control">
                 <option value="">Please select...</option>
-                <option value="mm" {!! 'mm' === $control->getFormValue('units')->value ? 'selected="selected"' : '' !!}>mm</option>
-                <option value="cm" {!! 'cm' === $control->getFormValue('units')->value ? 'selected="selected"' : '' !!}>cm</option>
-                <option value="m" {!! 'm' === $control->getFormValue('units')->value ? 'selected="selected"' : '' !!}>m</option>
-                <option value="km" {!! 'km' === $control->getFormValue('units')->value ? 'selected="selected"' : '' !!}>km</option>
+                <option value="mm" {!! 'mm' === (string) $control->getFormValue('units') ? 'selected="selected"' : '' !!}>mm</option>
+                <option value="cm" {!! 'cm' === (string) $control->getFormValue('units') ? 'selected="selected"' : '' !!}>cm</option>
+                <option value="m" {!! 'm' === (string) $control->getFormValue('units') ? 'selected="selected"' : '' !!}>m</option>
+                <option value="km" {!! 'km' === (string) $control->getFormValue('units') ? 'selected="selected"' : '' !!}>km</option>
             </select>
         </div>
         @if ($control->hasFormErrors())
