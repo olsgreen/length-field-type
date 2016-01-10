@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mailable\\Support\\Lists\\Field\\Types\\Length\\": "src/"
+            "Mailable\\Support\\Field\\Types\\Length\\": "src/"
         }
     },
     "config": {

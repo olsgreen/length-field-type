@@ -9,11 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mailable\Support\Lists\Field\Types\Length;
+namespace Mailable\Support\Field\Types\Length;
 
-use BoxedCode\Eloquent\Meta\Types\IntegerType;
-use BoxedCode\Eloquent\Meta\Types\StringType;
-use Mailable\Support\Lists\Field\Types\Definition;
+use Mailable\Support\Field\Types\Definition;
 
 class LengthDefinition extends Definition
 {

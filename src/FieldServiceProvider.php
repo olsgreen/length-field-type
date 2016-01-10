@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Mailable\Support\Lists\Field\Types\Length;
+namespace Mailable\Support\Field\Types\Length;
 
 use Illuminate\Support\ServiceProvider;
-use Mailable\Support\Lists\Field\Types\Registry;
+use Mailable\Support\Field\Types\Registry;
 
 class FieldServiceProvider extends ServiceProvider
 {
@@ -24,7 +24,7 @@ class FieldServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app[Registry::class]->register([
-            'length' => 'Mailable\Support\Lists\Field\Types\Length',
+            'length' => 'Mailable\Support\Field\Types\Length',
         ]);
     }
 

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Mailable\Support\Lists\Field\Types\Length;
+namespace Mailable\Support\Field\Types\Length;
 
 use Illuminate\Http\Request;
-use Mailable\Support\Lists\Field\Types\Field;
+use Mailable\Support\Field\Types\Field;
 
 class LengthField extends Field
 {
