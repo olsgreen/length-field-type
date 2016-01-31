@@ -12,7 +12,6 @@
 namespace Mailable\Support\Field\Types\Length;
 
 use Illuminate\Support\ServiceProvider;
-use Mailable\Support\Field\Types\Registry;
 
 class FieldServiceProvider extends ServiceProvider
 {
@@ -23,9 +22,7 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app[Registry::class]->register([
-            'length' => 'Mailable\Support\Field\Types\Length',
-        ]);
+        $this->app['config']->set('field.types.length', 'Mailable\Support\Field\Types\Length');
     }
 
     public function boot()
